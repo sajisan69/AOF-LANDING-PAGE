@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ART of Fitting | The Henley Collection</title>
+<meta name="description" content="Fit yourself with ART. Premium Henley T-shirts - any 3 for ৳990 and get a half sleeve tee free.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Allura&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --maroon:#491715;
+  --maroon-2:#5e1f1c;
+  --maroon-3:#76251f;
+  --gold:#c9a66b;
+  --gold-soft:#e8d6b3;
+  --cream:#f8f5f2;
+  --sand:#efe7e1;
+  --ink:#2a0f0e;
+  --muted:#80615d;
+  --line:#e6d9d2;
+  --ok:#2f7d4f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+
+/* ---------- announcement + header ---------- */
+.announce{background:var(--ink);color:var(--gold-soft);text-align:center;font-size:12px;letter-spacing:2px;padding:9px 12px;text-transform:uppercase}
+.announce b{color:#fff;font-weight:600}
+header{position:sticky;top:0;z-index:50;background:rgba(73,23,21,.97);backdrop-filter:blur(8px);color:#fff;border-bottom:1px solid rgba(201,166,107,.25)}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{display:inline-flex;flex-direction:column;align-items:center;border:1px solid rgba(255,255,255,.85);padding:6px 20px 8px;line-height:1;text-decoration:none;color:#fff}
+.logo strong{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;letter-spacing:3px}
+.logo span{font-family:'Allura',cursive;font-size:19px;margin-top:-2px;margin-left:30px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#fff;text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85;transition:.2s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.cart-pill{background:var(--gold);color:var(--maroon)!important;opacity:1!important;font-weight:600;padding:9px 16px;border-radius:30px}
+.cart-pill:hover{background:#fff;color:var(--maroon)!important}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:radial-gradient(circle at 70% 20%,#6b2420 0%,var(--maroon) 55%,#2f0e0d 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:22px;border:1px solid rgba(201,166,107,.35);pointer-events:none}
+.hero-inner{max-width:1200px;margin:auto;padding:80px 28px 90px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:5px;color:var(--gold);text-transform:uppercase}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(42px,7vw,84px);line-height:1;margin:16px 0 18px}
+.hero h1 em{font-family:'Allura',cursive;font-style:normal;color:var(--gold-soft);font-size:1.1em;display:block;margin-top:6px}
+.hero p.lead{color:#e9d8d3;max-width:480px;font-weight:300;font-size:17px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;border:1px solid var(--gold);padding:15px 30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:.25s;border-radius:2px}
+.btn.solid{background:var(--gold);color:var(--maroon)}
+.btn.solid:hover{background:#fff;border-color:#fff}
+.btn.ghost{color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.hero-art{position:relative;display:grid;place-items:center;padding:22px 0 0 22px}
+.hero-art .tee-main{position:relative;z-index:1;width:100%;max-width:560px;aspect-ratio:4/3;object-fit:cover;object-position:center;border:6px solid #fff;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:none}
+.hero-art .tee-main.svg{width:min(360px,80%);aspect-ratio:auto;border:0;box-shadow:none;object-fit:contain;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45));transform:rotate(-4deg)}
+.deal-badge{position:absolute;z-index:5;top:0;left:0;background:var(--gold);color:var(--maroon);width:118px;height:118px;border-radius:50%;display:grid;place-items:center;text-align:center;line-height:1.05;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:rotate(-10deg);border:3px double var(--maroon)}
+.deal-badge small{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.deal-badge b{font-family:'Cormorant Garamond',serif;font-size:34px;display:block}
+
+/* ---------- trust strip ---------- */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust-in{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:22px 20px;text-align:center}
+.trust-in div{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.trust-in b{display:block;color:var(--maroon);font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:0;text-transform:none;font-weight:600}
+
+/* ---------- offer ---------- */
+.container{max-width:1200px;margin:auto;padding:0 20px}
+.section-head{text-align:center;padding:70px 0 34px}
+.section-head .eyebrow{color:var(--maroon-3)}
+.section-head h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,5vw,48px);margin-top:8px}
+.section-head p{color:var(--muted);margin-top:8px}
+.offer{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:10px}
+.offer-card{background:#fff;border:1px solid var(--line);padding:26px 22px;text-align:center;position:relative}
+.offer-card.hot{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.offer-card .big{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;line-height:1}
+.offer-card.hot .big{color:var(--gold)}
+.offer-card h4{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;color:var(--muted)}
+.offer-card.hot h4{color:var(--gold-soft)}
+.offer-card p{font-size:14px;margin-top:8px;color:var(--muted)}
+.offer-card.hot p{color:#e9d8d3}
+
+/* ---------- bundle showcase ---------- */
+.bundle-show{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:stretch}
+.bundle-photo{position:relative;overflow:hidden;border:1px solid var(--line);background:#e2d9cf;aspect-ratio:3/4;max-height:640px;width:100%}
+.bundle-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.bundle-photo .collage{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);place-items:center;gap:6px;padding:20px;background:linear-gradient(180deg,#f1ece6,#e2d9cf)}
+.bundle-photo .collage img{position:static;height:auto}
+.photo-badge{position:absolute;left:16px;bottom:16px;background:var(--gold);color:var(--maroon);width:112px;height:112px;border-radius:50%;display:grid;place-content:center;text-align:center;line-height:1.05;box-shadow:0 10px 28px rgba(0,0,0,.35);border:3px double var(--maroon);transform:rotate(-8deg)}
+.photo-badge small{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.photo-badge b{font-family:'Cormorant Garamond',serif;font-size:32px;display:block}
+.bundle-cards{display:flex;flex-direction:column;gap:16px;justify-content:space-between}
+.bundle-cards .offer-card{flex:1;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:900px){
+  .bundle-show{grid-template-columns:1fr}
+  .bundle-photo{aspect-ratio:4/5;max-height:none}
+}
+
+/* ---------- products ---------- */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.product{background:#fff;border:1px solid var(--line);transition:.3s;display:flex;flex-direction:column}
+.product:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(73,23,21,.12)}
+.product .img{background:linear-gradient(180deg,#f1ece6,#e2d9cf);aspect-ratio:3/4;display:grid;place-items:center;position:relative;overflow:hidden}
+.product .img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.product .img img.svg{width:78%;height:auto;object-fit:contain}
+.product:hover .img img{transform:scale(1.05)}
+.tag{position:absolute;top:12px;left:12px;background:var(--maroon);color:#fff;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:5px 10px}
+.pinfo{padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pinfo h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600}
+.price{color:var(--maroon-3);font-weight:600}
+.price s{color:#aa9a95;font-weight:400;margin-left:6px;font-size:14px}
+.deal-hint{font-size:12px;color:var(--muted);background:var(--sand);padding:8px 10px;border-left:3px solid var(--gold);transition:.25s}
+.deal-hint.on{background:#eaf4ed;color:var(--ok);border-left-color:var(--ok);font-weight:600}
+.lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.sizes{display:flex;gap:8px}
+.size{flex:1;border:1px solid var(--line);background:#fff;padding:10px 0;font-size:14px;font-weight:500;color:var(--ink);transition:.2s;border-radius:2px}
+.size:hover{border-color:var(--maroon)}
+.size.on{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.add-row{display:flex;gap:10px;margin-top:auto}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:2px}
+.stepper button{width:34px;height:42px;border:0;background:none;font-size:18px;color:var(--maroon)}
+.stepper span{min-width:26px;text-align:center;font-weight:600}
+.add-btn{flex:1;border:0;background:var(--maroon);color:#fff;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:500;transition:.2s;border-radius:2px}
+.add-btn:hover{background:var(--maroon-3)}
+.add-btn.done{background:var(--ok)}
+
+/* ---------- order ---------- */
+.order-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start;margin:20px 0 80px}
+.panel{background:#fff;border:1px solid var(--line);padding:28px}
+.panel h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;margin-bottom:6px}
+.panel .sub{color:var(--muted);font-size:14px;margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;padding:13px;border:1px solid var(--line);background:#fff;font:inherit;font-size:15px;border-radius:2px;color:var(--ink)}
+.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+.field textarea{min-height:90px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.progress{background:var(--sand);padding:14px 16px;margin-bottom:16px;font-size:14px;border-left:3px solid var(--gold)}
+.bar{height:7px;background:#dcd0c8;margin-top:9px;border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--maroon-3));transition:.4s}
+.line{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.line .dot{width:34px;height:34px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);flex:none}
+.line .meta{flex:1;font-size:14px}
+.line .meta b{display:block;font-size:15px}
+.line .meta small{color:var(--muted)}
+.line .amt{font-weight:600}
+.line .rm{background:none;border:0;color:#b25b55;font-size:20px;width:28px}
+.empty{color:var(--muted);font-size:14px;padding:18px 0}
+.free-box{margin:16px 0;border:1px dashed var(--gold);background:#fffaf1;padding:14px}
+.free-box h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--maroon-3);margin-bottom:10px}
+.free-item{display:grid;grid-template-columns:auto 1fr 90px;gap:10px;align-items:center;margin-bottom:10px}
+.free-item .badge{background:var(--ok);color:#fff;font-size:10px;letter-spacing:1.5px;padding:4px 8px;text-transform:uppercase}
+.free-item select{padding:10px;border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;width:100%}
+.totals{margin:16px 0;font-size:15px}
+.totals div{display:flex;justify-content:space-between;padding:4px 0}
+.totals .save{color:var(--ok);font-weight:600}
+.totals .grand{border-top:1px solid var(--line);margin-top:8px;padding-top:12px;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--maroon)}
+.order-btn{width:100%;background:var(--maroon);color:#fff;border:0;padding:17px;font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:500;transition:.2s;border-radius:2px}
+.order-btn:hover{background:var(--maroon-3)}
+.order-btn:disabled{opacity:.5;cursor:not-allowed}
+#result{display:none;margin-top:18px;padding:16px;background:#f0f5ed;border-radius:4px;white-space:pre-wrap;line-height:1.6;font-size:14px}
+.copy-btn{margin-top:10px;background:var(--ink);color:#fff;border:0;padding:10px 16px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+
+/* mobile sticky bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--maroon);color:#fff;padding:12px 16px;align-items:center;justify-content:space-between;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+.mbar b{font-family:'Cormorant Garamond',serif;font-size:24px}
+.mbar a{background:var(--gold);color:var(--maroon);text-decoration:none;padding:11px 20px;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-radius:2px}
+
+/* ---------- footer ---------- */
+footer{background:#2f0e0d;color:#d9c7c2;margin-top:0}
+.f-top{background:var(--maroon);text-align:center;padding:46px 20px;border-bottom:1px solid rgba(201,166,107,.25)}
+.f-top h3{font-family:'Cormorant Garamond',serif;color:#fff;font-weight:500;font-size:clamp(26px,4vw,38px)}
+.f-top p{margin:8px 0 22px;color:#e4d3ce}
+.f-main{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding:56px 24px 40px}
+.f-main h5{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+.f-main ul{list-style:none}
+.f-main li{margin-bottom:10px;font-size:14px}
+.f-main a{color:#d9c7c2;text-decoration:none;transition:.2s}
+.f-main a:hover{color:var(--gold)}
+.f-brand p{font-size:14px;margin:18px 0;max-width:290px;color:#bfaaa5}
+.social{display:flex;gap:10px}
+.social a{width:40px;height:40px;border:1px solid rgba(201,166,107,.5);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
+.social a:hover{background:var(--gold);color:var(--maroon)}
+.social svg{width:18px;height:18px;fill:currentColor}
+.f-bottom{border-top:1px solid rgba(255,255,255,.08);max-width:1200px;margin:auto;padding:20px 24px 26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#a58f8a;letter-spacing:.5px}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding:56px 22px 70px;text-align:center}
+  .hero p.lead{margin:auto}
+  .hero-cta{justify-content:center}
+  .hero-art{min-height:320px;margin-top:10px}
+  .nav-links a:not(.cart-pill){display:none}
+  .offer{grid-template-columns:1fr}
+  .products{grid-template-columns:repeat(2,1fr);gap:14px}
+  .order-wrap{grid-template-columns:1fr}
+  .f-main{grid-template-columns:1fr 1fr}
+  .trust-in{grid-template-columns:repeat(2,1fr);gap:18px}
+  .mbar{display:flex}
+  body{padding-bottom:68px}
+}
+@media(max-width:520px){
+  .pinfo{padding:12px}
+  .pinfo h3{font-size:19px}
+  .size{padding:8px 0;font-size:13px}
+  .add-row{flex-direction:column}
+  .stepper{justify-content:space-between}
+  .stepper button{flex:none}
+  .add-btn{padding:12px}
+  .row2{grid-template-columns:1fr}
+  .f-main{grid-template-columns:1fr;gap:30px}
+  .free-item{grid-template-columns:1fr 90px}
+  .free-item .badge{grid-column:1/-1;justify-self:start}
+  .panel{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="announce">Buy any <b>3 Henleys for ৳990</b> &nbsp;+&nbsp; a <b>free half sleeve tee</b> of your choice</div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top"><strong>ART</strong><span>of Fitting</span></a>
+    <nav class="nav-links">
+      <a href="#offer">The Offer</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+      <a href="#order" class="cart-pill">My Order (<span id="navCount">0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Fit yourself with ART</div>
+      <h1>The Henley <em>Collection</em></h1>
+      <p class="lead">Soft, clean-cut Henleys in six timeless colors. Find your color, choose your fit, wear your ART.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn solid">Shop the Collection</a>
+        <a href="#offer" class="btn ghost">See the 3-Pack Deal</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="deal-badge"><div><small>Any 3 for</small><b>৳990</b><small>+ free tee</small></div></div>
+      <img class="tee-main" id="heroA" alt="ART of Fitting Henley Collection">
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="trust-in">
+    <div><b>Premium Fabric</b>Soft &amp; breathable</div>
+    <div><b>3 Sizes</b>M · L · XL</div>
+    <div><b>Free Tee</b>With every 3 pieces</div>
+    <div><b>Easy Ordering</b>Confirm in 1 minute</div>
+  </div>
+</div>
+
+<main class="container">
+
+  <section id="offer">
+    <div class="section-head">
+      <div class="eyebrow">Limited Offer</div>
+      <h2>Wear More. Pay Less.</h2>
+      <p>The more you pick, the more you save.</p>
+    </div>
+    <div class="bundle-show">
+      <figure class="bundle-photo">
+        <img src="photos/6henley.png" alt="ART of Fitting Henley collection in cream, white, navy, olive and charcoal"
+             onerror="this.onerror=null;this.replaceWith(fallbackCollage())">
+        <figcaption class="photo-badge"><small>Any 3 for</small><b>৳990</b><small>+ free tee</small></figcaption>
+      </figure>
+      <div class="bundle-cards">
+        <div class="offer-card"><h4>Single Piece</h4><div class="big">৳350</div><p>Any color, any size (M, L, XL).</p></div>
+        <div class="offer-card hot"><h4>3-Pack Bundle</h4><div class="big">৳990</div><p>Pick any 3 Henleys and save ৳60 on every bundle.</p></div>
+        <div class="offer-card"><h4>Free Gift</h4><div class="big">+ 1 Tee</div><p>A half sleeve T-shirt on every bundle. Choose it yourself or let us surprise you.</p></div>
+        <a href="#shop" class="btn solid" style="text-align:center;background:var(--maroon);border-color:var(--maroon);color:#fff">Build Your 3-Pack</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="section-head">
+      <div class="eyebrow">Choose Your Colors</div>
+      <h2>Six Shades. One Signature Fit.</h2>
+      <p>Select a size, set the quantity and add it to your order.</p>
+    </div>
+    <div class="products" id="products"></div>
+  </section>
+
+  <section id="order">
+    <div class="section-head">
+      <div class="eyebrow">Almost There</div>
+      <h2>Complete Your Order</h2>
+    </div>
+    <div class="order-wrap">
+
+      <div class="panel">
+        <h3>Your Selection</h3>
+        <div class="sub">Review your pieces and pick your free tee.</div>
+
+        <div class="progress" id="progress">
+          Add 3 pieces to unlock <b>৳990 + a free tee</b>.
+          <div class="bar"><i id="barFill"></i></div>
+        </div>
+
+        <div id="lines"></div>
+
+        <div id="freeBox" class="free-box" style="display:none">
+          <h4>Your free half sleeve tee</h4>
+          <div id="freeItems"></div>
+        </div>
+
+        <div class="totals">
+          <div><span>Pieces</span><span id="tCount">0</span></div>
+          <div><span>Regular price</span><span id="tRegular">৳0</span></div>
+          <div class="save"><span>Bundle savings</span><span id="tSave">৳0</span></div>
+          <div class="grand"><span>Total</span><span id="tTotal">৳0</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Delivery Details</h3>
+        <div class="sub">We'll confirm your order by phone.</div>
+
+        <div class="field"><label>Full Name *</label><input id="name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="field"><label>Phone Number *</label><input id="phone" type="tel" placeholder="01XXXXXXXXX" autocomplete="tel"></div>
+        <div class="field"><label>Delivery Address *</label><textarea id="address" placeholder="House, road, area, city" autocomplete="street-address"></textarea></div>
+        <div class="field"><label>Note (optional)</label><input id="note" type="text" placeholder="Anything we should know?"></div>
+
+        <button class="order-btn" id="orderBtn" onclick="placeOrder()">Confirm Order</button>
+        <div id="result"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div class="mbar">
+  <div><small style="display:block;font-size:11px;letter-spacing:2px;color:var(--gold-soft)"><span id="mCount">0</span> PIECES</small><b id="mTotal">৳0</b></div>
+  <a href="#order">View Order</a>
+</div>
+
+<footer id="contact">
+  <div class="f-top">
+    <h3>Fit yourself with ART.</h3>
+    <p>Three Henleys. One price. A free tee on us.</p>
+    <a href="#shop" class="btn solid">Start Shopping</a>
+  </div>
+
+  <div class="f-main">
+    <div class="f-brand">
+      <a class="logo" href="#top"><strong>ART</strong><span>of Fitting</span></a>
+      <p>Thoughtfully made menswear basics, designed to fit well and look effortless every single day.</p>
+      <div class="social">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.5-3.3h-3.2V8.6c0-.9.4-1.7 1.8-1.7h1.5V4.1S15.5 3.9 14.3 3.9c-2.6 0-4.3 1.6-4.3 4.4v2.4H7.3V14H10v8z"/></svg></a>
+        <a href="https://www.instagram.com/art_of_fitting" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.3-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
+        <a href="https://www.artoffitting.com" target="_blank" rel="noopener" aria-label="Website"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3a15.6 15.6 0 0 0-1.2-5.2A8 8 0 0 1 18.9 11zM12 4c.8 1 1.7 3.1 2 7h-4c.3-3.9 1.2-6 2-7zM9.3 5.8A15.6 15.6 0 0 0 8.1 11h-3a8 8 0 0 1 4.2-5.2zM5.1 13h3a15.6 15.6 0 0 0 1.2 5.2A8 8 0 0 1 5.1 13zM12 20c-.8-1-1.7-3.1-2-7h4c-.3 3.9-1.2 6-2 7zm2.7-1.8c.7-1.4 1.1-3.2 1.2-5.2h3a8 8 0 0 1-4.2 5.2z"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="#shop">Henley Collection</a></li>
+        <li><a href="#offer">3-Pack Offer</a></li>
+        <li><a href="#order">Your Order</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Customer Care</h5>
+      <ul>
+        <li><a href="#offer">How the Offer Works</a></li>
+        <li><a href="#shop">Size Guide: M · L · XL</a></li>
+        <li><a href="#order">Place an Order</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5>Get in Touch</h5>
+      <ul>
+        <li>Facebook: <a href="https://www.facebook.com/" target="_blank" rel="noopener">art of fitting</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/art_of_fitting" target="_blank" rel="noopener">@art_of_fitting</a></li>
+        <li>Web: <a href="https://www.artoffitting.com">www.artoffitting.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="f-bottom">
+    <span>© 2026 ART of Fitting. All rights reserved.</span>
+    <span>FIT YOURSELF WITH ART</span>
+  </div>
+</footer>
+
+<script>
+/* ================= SETTINGS (edit these) ================= */
+const PRICE = 350;           // single piece
+const BUNDLE_PRICE = 990;    // any 3 pieces
+const BUNDLE_SIZE = 3;
+const WHATSAPP_NUMBER = "";  // e.g. "8801XXXXXXXXX" - orders will open in WhatsApp when set
+/* ========================================================= */
+
+const colors = [
+  {name:"Black",  hex:"#202020", img:"photos/black.png"},
+  {name:"White",  hex:"#f3f0e9", img:"photos/white.png"},
+  {name:"Navy",   hex:"#182b48", img:"photos/navy.png"},
+  {name:"Olive",  hex:"#68704b", img:"photos/olive.png"},
+  {name:"Cream",  hex:"#ded0b9", img:"photos/cream.png"},
+  {name:"Gray",   hex:"#858585", img:"photos/grey.png"}
+];
+const SIZES = ["M","L","XL"];
+
+/* ---------- T-shirt illustrations (SVG) ---------- */
+function shade(hex, amt){
+  const n = parseInt(hex.slice(1),16);
+  let r=(n>>16)+amt, g=((n>>8)&255)+amt, b=(n&255)+amt;
+  r=Math.max(0,Math.min(255,r)); g=Math.max(0,Math.min(255,g)); b=Math.max(0,Math.min(255,b));
+  return "#"+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
+}
+function teeSVG(hex, type){
+  const dark = shade(hex,-28), light = shade(hex,18);
+  const light_c = (parseInt(hex.slice(1,3),16)+parseInt(hex.slice(3,5),16)+parseInt(hex.slice(5,7),16))/3 > 150;
+  const btn = light_c ? "#8a7a68" : "#e7d5bc";
+  const stitch = light_c ? "rgba(0,0,0,.18)" : "rgba(255,255,255,.28)";
+  const henley = type==="henley";
+  const body = henley
+   ? "M138 58 Q200 96 262 58 L338 92 L372 330 L318 342 L292 178 L292 392 Q200 408 108 392 L108 178 L82 342 L28 330 L62 92 Z"
+   : "M138 58 Q200 96 262 58 L338 92 L372 188 L316 204 L292 170 L292 392 Q200 408 108 392 L108 170 L84 204 L28 188 L62 92 Z";
+  const placket = henley ? `
+    <path d="M186 86 L214 86 L214 214 L186 214 Z" fill="${light}" opacity=".55"/>
+    <path d="M186 86 L186 214 M214 86 L214 214" stroke="${stitch}" stroke-width="1.5" fill="none"/>
+    <circle cx="200" cy="112" r="5" fill="${btn}"/><circle cx="200" cy="148" r="5" fill="${btn}"/><circle cx="200" cy="184" r="5" fill="${btn}"/>` : "";
+  const neck = henley
+   ? `<path d="M138 58 Q200 100 262 58 L252 52 Q200 84 148 52 Z" fill="${dark}"/>`
+   : `<path d="M150 56 Q200 112 250 56 L262 58 Q200 128 138 58 Z" fill="${dark}"/><path d="M158 60 Q200 108 242 60" stroke="${stitch}" fill="none" stroke-width="1.5"/>`;
+  const cuffs = henley ? `<path d="M28 330 L82 342 L80 356 L26 344 Z M372 330 L318 342 L320 356 L374 344 Z" fill="${dark}"/>` : `<path d="M28 188 L84 204 M372 188 L316 204" stroke="${stitch}" stroke-width="2"/>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${light}"/><stop offset=".55" stop-color="${hex}"/><stop offset="1" stop-color="${dark}"/></linearGradient>
+      <linearGradient id="fold" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".12"/><stop offset=".18" stop-color="#000" stop-opacity="0"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".12"/></linearGradient>
+    </defs>
+    <path d="${body}" fill="url(#g)" stroke="${light_c?'rgba(0,0,0,.12)':'rgba(255,255,255,.06)'}" stroke-width="1.5"/>
+    <path d="${body}" fill="url(#fold)"/>
+    <path d="M108 380 Q200 396 292 380" stroke="${stitch}" stroke-width="1.5" fill="none"/>
+    ${cuffs}${neck}${placket}
+    <path d="M150 230 Q160 300 150 370" stroke="rgba(0,0,0,.06)" stroke-width="10" fill="none"/>
+    <path d="M250 230 Q240 300 250 370" stroke="rgba(0,0,0,.06)" stroke-width="10" fill="none"/>
+  </svg>`;
+  return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+}
+
+/* ---------- state ---------- */
+const picks = colors.map(()=>({size:"M", qty:1}));
+let cart = [];          // {color, size, qty}
+let freeTees = [];      // {style:"random"|colorName, size}
+
+/* ---------- build product cards ---------- */
+const grid = document.getElementById("products");
+colors.forEach((c,i)=>{
+  grid.insertAdjacentHTML("beforeend", `
+  <article class="product">
+    <div class="img">
+      <span class="tag">Henley</span>
+      <img src="${c.img}" alt="${c.name} Henley T-shirt" loading="lazy" onerror="useDrawn(this,${i})">
+    </div>
+    <div class="pinfo">
+      <h3>${c.name} Henley</h3>
+      <div class="price">৳${PRICE} <small style="color:var(--muted);font-weight:400">/ piece</small></div>
+      <div>
+        <div class="lbl" style="margin-bottom:7px">Size</div>
+        <div class="sizes" id="sizes-${i}">
+          ${SIZES.map(s=>`<button class="size ${s==='M'?'on':''}" onclick="pickSize(${i},'${s}')">${s}</button>`).join("")}
+        </div>
+      </div>
+      <div class="deal-hint" id="hint-${i}">Any ${BUNDLE_SIZE} pieces = ৳${BUNDLE_PRICE} + free tee</div>
+      <div class="add-row">
+        <div class="stepper">
+          <button onclick="stepQty(${i},-1)" aria-label="Decrease">−</button>
+          <span id="qty-${i}">1</span>
+          <button onclick="stepQty(${i},1)" aria-label="Increase">+</button>
+        </div>
+        <button class="add-btn" id="add-${i}" onclick="addToOrder(${i})">Add to Order</button>
+      </div>
+    </div>
+  </article>`);
+});
+
+/* HERO PHOTO: put your photo at images/hero.jpg (or change the path below) */
+const heroImg = document.getElementById("heroA");
+heroImg.onerror = () => { heroImg.onerror = null; heroImg.className = "tee-main svg"; heroImg.src = teeSVG("#5b6740","henley"); };
+heroImg.src = "photos/6onHang.png";
+
+/* if a product photo is missing, show the drawn shirt instead */
+function useDrawn(img,i){ img.onerror=null; img.className="svg"; img.src=teeSVG(colors[i].hex,"henley"); }
+
+function pickSize(i,s){
+  picks[i].size = s;
+  document.querySelectorAll(`#sizes-${i} .size`).forEach(b=>b.classList.toggle("on", b.textContent===s));
+}
+function stepQty(i,d){
+  picks[i].qty = Math.max(1, Math.min(20, picks[i].qty + d));
+  document.getElementById(`qty-${i}`).textContent = picks[i].qty;
+  updateHint(i);
+}
+function updateHint(i){
+  const el = document.getElementById(`hint-${i}`); if(!el) return;
+  const q = picks[i].qty;
+  if(q >= BUNDLE_SIZE){
+    const b = Math.floor(q/BUNDLE_SIZE), price = b*BUNDLE_PRICE + (q%BUNDLE_SIZE)*PRICE;
+    el.classList.add("on");
+    el.textContent = `🎉 ${q} pcs = ৳${price} + ${b} free tee${b>1?'s':''}`;
+  } else {
+    el.classList.remove("on");
+    el.textContent = `Any ${BUNDLE_SIZE} pieces = ৳${BUNDLE_PRICE} + free tee`;
+  }
+}
+function addToOrder(i){
+  const c = colors[i], p = picks[i];
+  const found = cart.find(l=>l.color===c.name && l.size===p.size);
+  if(found) found.qty += p.qty; else cart.push({color:c.name, size:p.size, qty:p.qty});
+  const btn = document.getElementById(`add-${i}`);
+  btn.textContent = "✓ Added"; btn.classList.add("done");
+  setTimeout(()=>{btn.textContent="Add to Order"; btn.classList.remove("done");},1100);
+  picks[i].qty = 1; document.getElementById(`qty-${i}`).textContent = 1;
+  updateHint(i);
+  render();
+}
+function changeLine(idx,d){
+  cart[idx].qty += d;
+  if(cart[idx].qty<=0) cart.splice(idx,1);
+  render();
+}
+function removeLine(idx){ cart.splice(idx,1); render(); }
+
+/* ---------- pricing ---------- */
+function calc(){
+  const n = cart.reduce((s,l)=>s+l.qty,0);
+  const bundles = Math.floor(n/BUNDLE_SIZE);
+  const rest = n % BUNDLE_SIZE;
+  const total = bundles*BUNDLE_PRICE + rest*PRICE;
+  const regular = n*PRICE;
+  return {n,bundles,rest,total,regular,save:regular-total};
+}
+const hexOf = name => colors.find(c=>c.name===name).hex;
+
+/* ---------- render order panel ---------- */
+function render(){
+  const t = calc();
+
+  // free tees follow the number of bundles
+  while(freeTees.length < t.bundles) freeTees.push({style:"random", size:"M"});
+  freeTees.length = t.bundles;
+
+  // lines
+  const linesEl = document.getElementById("lines");
+  linesEl.innerHTML = cart.length ? cart.map((l,idx)=>`
+    <div class="line">
+      <span class="dot" style="background:${hexOf(l.color)}"></span>
+      <div class="meta"><b>${l.color} Henley</b><small>Size ${l.size}</small></div>
+      <div class="stepper" style="transform:scale(.9)">
+        <button onclick="changeLine(${idx},-1)">−</button><span>${l.qty}</span><button onclick="changeLine(${idx},1)">+</button>
+      </div>
+      <button class="rm" onclick="removeLine(${idx})" aria-label="Remove">×</button>
+    </div>`).join("") : `<div class="empty">Your order is empty. Pick your favorite colors above.</div>`;
+
+  // progress
+  const prog = document.getElementById("progress");
+  const fill = Math.min(100, (t.rest===0 && t.n>0 ? 100 : (t.rest/BUNDLE_SIZE)*100));
+  let msg;
+  if(t.n===0) msg = `Add ${BUNDLE_SIZE} pieces to unlock <b>৳${BUNDLE_PRICE} + a free tee</b>.`;
+  else if(t.rest===0) msg = `🎉 Bundle unlocked! You're getting <b>${t.bundles} free half sleeve tee${t.bundles>1?'s':''}</b>. Add ${BUNDLE_SIZE} more for another.`;
+  else msg = `Add <b>${BUNDLE_SIZE-t.rest} more</b> piece${BUNDLE_SIZE-t.rest>1?'s':''} to get ${BUNDLE_SIZE} for ৳${BUNDLE_PRICE} + a free tee.`;
+  prog.innerHTML = msg + `<div class="bar"><i style="width:${fill}%"></i></div>`;
+
+  // free tee chooser
+  const box = document.getElementById("freeBox");
+  box.style.display = t.bundles ? "block" : "none";
+  document.getElementById("freeItems").innerHTML = freeTees.map((f,i)=>`
+    <div class="free-item">
+      <span class="badge">Free</span>
+      <select onchange="setFree(${i},'style',this.value)">
+        <option value="random" ${f.style==='random'?'selected':''}>🎲 Surprise me (random color)</option>
+        ${colors.map(c=>`<option value="${c.name}" ${f.style===c.name?'selected':''}>${c.name} half sleeve</option>`).join("")}
+      </select>
+      <select onchange="setFree(${i},'size',this.value)">
+        ${SIZES.map(s=>`<option value="${s}" ${f.size===s?'selected':''}>Size ${s}</option>`).join("")}
+      </select>
+    </div>`).join("");
+
+  // totals
+  document.getElementById("tCount").textContent = t.n;
+  document.getElementById("tRegular").textContent = "৳"+t.regular;
+  document.getElementById("tSave").textContent = "−৳"+t.save;
+  document.getElementById("tTotal").textContent = "৳"+t.total;
+  document.getElementById("navCount").textContent = t.n;
+  document.getElementById("mCount").textContent = t.n;
+  document.getElementById("mTotal").textContent = "৳"+t.total;
+}
+function setFree(i,key,val){ freeTees[i][key]=val; }
+
+/* ---------- place order ---------- */
+function placeOrder(){
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const note = document.getElementById("note").value.trim();
+  const t = calc();
+
+  if(!t.n){ alert("Please add at least one Henley to your order."); document.getElementById("shop").scrollIntoView(); return; }
+  if(!name || !phone || !address){ alert("Please fill in your name, phone number and delivery address."); return; }
+  if(!/^(\+?88)?01[3-9]\d{8}$/.test(phone.replace(/[\s-]/g,""))){
+    if(!confirm("That phone number looks unusual. Continue anyway?")) return;
+  }
+
+  // resolve random free tees once
+  const free = freeTees.map(f=>({
+    style: f.style==="random" ? colors[Math.floor(Math.random()*colors.length)].name + " (random pick)" : f.style,
+    size: f.size
+  }));
+
+  const lines = [
+    "ART OF FITTING - NEW ORDER",
+    "--------------------------",
+    "Name: "+name,
+    "Phone: "+phone,
+    "Address: "+address,
+    note ? "Note: "+note : null,
+    "",
+    "HENLEYS:",
+    ...cart.map(l=>`${l.color} Henley | Size ${l.size} | Qty ${l.qty}`),
+    free.length ? "" : null,
+    free.length ? "FREE HALF SLEEVE TEE:" : null,
+    ...free.map(f=>`${f.style} half sleeve | Size ${f.size} | FREE`),
+    "",
+    `Pieces: ${t.n}`,
+    `Bundle savings: ৳${t.save}`,
+    `TOTAL: ৳${t.total}`
+  ].filter(x=>x!==null).join("\n");
+
+  const result = document.getElementById("result");
+  result.style.display = "block";
+
+  if(WHATSAPP_NUMBER){
+    window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(lines),"_blank");
+    result.textContent = "Opening WhatsApp to send your order…\n\n"+lines;
+  } else {
+    result.textContent = "Your order is ready!\n\n"+lines+"\n\nPlease send this to our Facebook or Instagram page (@art_of_fitting) to confirm.";
+    const btn = document.createElement("button");
+    btn.className="copy-btn"; btn.textContent="Copy order details";
+    btn.onclick = ()=>navigator.clipboard.writeText(lines).then(()=>btn.textContent="Copied ✓");
+    result.appendChild(document.createElement("br"));
+    result.appendChild(btn);
+  }
+  result.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+/* shown only if images/bundle.jpg is missing */
+function fallbackCollage(){
+  const d = document.createElement("div");
+  d.className = "collage";
+  ["#ded0b9","#f3f0e9","#182b48","#68704b","#202020","#858585"].forEach(h=>{
+    const i = document.createElement("img"); i.src = teeSVG(h,"henley"); i.alt = "";
+    d.appendChild(i);
+  });
+  return d;
+}
+
+render();
+</script>
+</body>
+</html>
